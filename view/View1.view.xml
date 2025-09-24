@@ -1,0 +1,185 @@
+<mvc:View controllerName="ZGBC_FLEET_CLEARK.ZGBC_FLEET_CLEARK.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" 
+          xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified"
+	      xmlns:l="sap.ui.layout">
+  	     <Shell id="shell">
+		 <App id="app">
+			<pages>
+				<Page title="{i18n>title}" titleAlignment = "Center">
+				<content>
+					  <VBox class="sapUiSmallMargin">
+						<f:SimpleForm id="IdEmpDetail"
+						              editable="true" 
+						              layout="ResponsiveGridLayout"
+						              title="Requestor Details"
+						              labelSpanXL="4"
+									  labelSpanL="4"
+									  labelSpanM="12"
+									  labelSpanS="12"
+								      adjustLabelSpan="false"
+								      emptySpanXL="0"
+									  emptySpanL="0"
+									  emptySpanM="0"
+									  emptySpanS="0"
+							          columnsXL="2"
+								      columnsL="2"
+									  columnsM="1"
+									  backgroundDesign = "Solid"
+									  singleContainerFullSize="false">
+							 <f:content>
+							 	<core:Title text="" />
+				        	    <Label text="Request ID" required="true"/>
+				        	    <Input id="idRequestid" value=""  submit="onSubmit" placeholder="Enter Request ID"></Input>
+				        	    <Label text="Requested For" required="true"/>
+						  	    <Text id="idPernr" text="{/Pernr}" ></Text>
+							    <Label text="Employee Name"/>
+							    <Text id="idNameEn" text="{/NameEn}" ></Text>
+								<Label text="Employee Name(Arabic)"/>
+								<Text id="idNameAr" text="{/NameAr}" ></Text>
+								<Label text="Position Code"/>
+								<Text text="{/PositionId}" id="idPositionCode"></Text>
+								<Label text="Position"/>
+								<Text text="{/PositionTextEn}" id="idPositionEn"></Text>
+								<Label text="Position(Arabic)"/>
+								<Text text="{/PositionTextAr}" id="idPositionAr"></Text>
+								<Label text="Department"/>
+								<Text text="{/DepartmentEn}" id="idDepartmentEn"></Text>
+								<Label text="Department(Arabic)"/>
+								<Text text="{/DepartmentAr}" id="idDepartmentAr"></Text>
+								<Label text="Channel"/>
+								<Text text="{/Channel}" id="idChannel"></Text>
+								  
+								<core:Title text="" />
+								<Label text=""/>
+								<Text text="" id="Blank"></Text>
+								<Label text="CompanyCode"/>
+								<Text text="{/Cocd}" id="idCocd"></Text>
+								<Label text="Company name"/>
+								<Text text="{/CocdDesc}" id="idCompanyName"></Text>
+								<Label text="Delivering Plant (Own or External)"/>
+							    <Text text="{/Plant}" id="idEmpPlant"></Text>
+								<Label text="Employee Grade/Group ID" />
+								<Text id="idEmpSubGroup" text ="{/EmpSubgroup}"></Text>
+								<Label text="Employee Grade/Group Desc." />
+								<Text id="idEmpSubGroupDesc" text="{/EmpSubgroupDesc}"></Text>
+								<Label text="Iquama No"/>
+								<Text id="idIquama" text="{/IdNoEn}" ></Text>
+								<Label text="Employee Cost Center"/>
+								<Text id="idEmpCostCenter" text= "{/CostCenter}"/>
+                                <Label text="Driving license No"/>
+								<Text id="idDl" text="{/Dl}" ></Text>
+							 </f:content>
+							 </f:SimpleForm>
+							</VBox>
+					
+						<VBox class="sapUiSmallMargin">
+						<f:SimpleForm id="IdVehicleSelection"
+						              editable="true" 
+						              layout="ResponsiveGridLayout"
+						              title="Vehicle Selected For Shipping"
+						              labelSpanXL="4"
+									  labelSpanL="4"
+									  labelSpanM="12"
+									  labelSpanS="12"
+								      adjustLabelSpan="false"
+								      emptySpanXL="0"
+									  emptySpanL="0"
+									  emptySpanM="0"
+									  emptySpanS="0"
+							          columnsXL="2"
+								      columnsL="2"
+									  columnsM="1"
+									  backgroundDesign = "Solid"
+									  singleContainerFullSize="false">
+							 <f:content>
+							 	<core:Title text="" />
+				        	    <Label text="Vehicle ID"/>
+				        	    <Text id="idVehicleID" text="{localVhModel>/Vehicleid}" ></Text>
+				        	    
+				        	    <Label text="Vehicle Name"/>
+				        	    <Text id="idVehicleName" text="{localVhModel>/VehicleName}" ></Text>
+				        	    
+				        	    <Label text="Vehicle Vendor"/>
+				        	    <Text id="idVehicleVendor" text="{localVhModel>/VehicleVendor}" ></Text>
+				        	    
+				        	    <Label text="Vehicle/Plate Number"/>
+				        	    <Text id="idVehicleNumber" text="{localVhModel>/VehicleNumber}" ></Text>
+				        	    
+				        	    <core:Title text="" />
+				        	    <Label text="Plant" required="true"/>
+				        	    <Text id="idPlant" text="{localVhModel>/Plant}"  ></Text>
+				        	    
+				        	    <Label text="Location"/>
+				        	    <Text id="idLocation" text="{localVhModel>/Location}" ></Text>
+				        	    
+				        	    <Label text="Cost Center"/>
+				        	    <Text id="idCostCenter" text="{localVhModel>/CostCenter}" ></Text>
+				        	    
+							 </f:content>
+							 </f:SimpleForm>
+							</VBox>
+					    
+						<VBox class="sapUiSmallMargin">
+						<f:SimpleForm id="IdShipDet"
+						              editable="true" 
+						              layout="ResponsiveGridLayout"
+						              title="Shipping Details"
+						              labelSpanXL="4"
+									  labelSpanL="4"
+									  labelSpanM="12"
+									  labelSpanS="12"
+								      adjustLabelSpan="false"
+								      emptySpanXL="0"
+									  emptySpanL="0"
+									  emptySpanM="0"
+									  emptySpanS="0"
+							          columnsXL="2"
+								      columnsL="2"
+									  columnsM="1"
+									  backgroundDesign = "Solid"
+									  singleContainerFullSize="false">
+							<f:content>
+								    <core:Title text="" />
+									<Label text="From Location"                           required="true"/>
+									<Input id="idFloc" value="{localVhModel>/Location}"   placeholder="" enabled = "false"></Input>
+									
+									<Label text="Ship To Plant"                            required="true"/>
+									<Select id = "IdSelectedPlant" width="200%"            autoAdjustWidth = "true"  items="{localPlantDD>/Plants/}" 
+							   	    selectedKey = "{localPlantDD>/PlantSelected}"          change = "onSelectPlant">
+				    			    <core:Item text="{localPlantDD>PlantName}"             key="{localPlantDD>Plant}"/>			
+							    	</Select>
+									
+									<Label text="Ship To Location"                         required="true"/>
+							    	<Select id = "IdSelectedLoc" width="200%"              autoAdjustWidth = "true"  items="{LocDD>/Locations/}" 
+							   	    selectedKey = "{LocDD>/LocSelected}"                   >
+				    			    <core:Item text="{LocDD>LocationName}"                 key="{LocDD>LocationId}"/>			
+							    	</Select>
+									
+									<Label text="Name Of The Shipper"                      required="true"/>
+									<Input id="idShname" value=""                          placeholder="Enter The Shippers Name"></Input>
+									
+									<Label text="Cost"/>
+									<Input id="idCost" value = '0.000'></Input>
+									
+							    	<Label text="Contact Number"/>
+									<Input id="idContact" value=""                         placeholder="Drivers's Contact Number"></Input>
+								
+									<Label text="Expected Arrival Date"/>
+								    <DatePicker dateValue="{InputDate>/ArrivalDate}"/>  
+							</f:content>
+					 	 </f:SimpleForm>
+					</VBox>
+				</content>
+				
+				<footer>
+					 <OverflowToolbar id="otbFooter">
+				     <ToolbarSpacer/>
+				     <Button type="Emphasized" text="Submit Request" press="onSubmitRequest" width="200px" id = "Idsubmit"  visible = "{Visibility>/SubmitVisibile}">
+			   		 <layoutData><OverflowToolbarLayoutData priority="NeverOverflow" /></layoutData>
+		    		 </Button>
+			         </OverflowToolbar>
+	           	</footer>
+			</Page>
+		</pages>
+		</App>
+	</Shell>
+</mvc:View>
