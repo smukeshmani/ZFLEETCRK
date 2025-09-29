@@ -41,10 +41,10 @@
       "path": "/sap/opu/odata",
       "target": {
         "type": "destination",
-        "name": "GATEWAYDEV_NBAA",
+        "name": "DEV_BRN_HEC",
         "entryPath": "/sap/opu/odata"
       },
-      "description": "DEVS4"
+      "description": "DEVHEC"
     },
     {
       "path": "/sap/bc/ui5_ui5",
