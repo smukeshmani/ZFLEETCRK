@@ -44,13 +44,13 @@
         "name": "DEV_BRN_786",
         "entryPath": "/sap/opu/odata"
       },
-      "description": "DEVBRN"
+      "description": "DEVS4"
     },
     {
       "path": "/sap/bc/ui5_ui5",
       "target": {
         "type": "destination",
-        "name": "GATEWAYDEV_NBAA",
+        "name": "DEV_BRN_786",
         "entryPath": "/sap/bc/ui5_ui5"
       },
       "description": "DEVS4"
