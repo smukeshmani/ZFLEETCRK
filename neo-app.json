@@ -41,10 +41,10 @@
       "path": "/sap/opu/odata",
       "target": {
         "type": "destination",
-        "name": "DEV_BRN_HEC",
+        "name": "DEV_BRN_786",
         "entryPath": "/sap/opu/odata"
       },
-      "description": "DEVHEC"
+      "description": "DEVBRN"
     },
     {
       "path": "/sap/bc/ui5_ui5",
