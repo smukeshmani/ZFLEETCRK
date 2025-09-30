@@ -4,13 +4,12 @@
   	     <Shell id="shell">
 		 <App id="app">
 			<pages>
-				<Page title="{i18n>title}" titleAlignment = "Center">
+				<Page>
 				<content>
 					  <VBox class="sapUiSmallMargin">
 						<f:SimpleForm id="IdEmpDetail"
 						              editable="true" 
 						              layout="ResponsiveGridLayout"
-						              title="Requestor Details"
 						              labelSpanXL="4"
 									  labelSpanL="4"
 									  labelSpanM="12"
@@ -26,7 +25,7 @@
 									  backgroundDesign = "Solid"
 									  singleContainerFullSize="false">
 							 <f:content>
-							 	<core:Title text="" />
+							 	<core: />
 				        	    <Label text="Request ID" required="true"/>
 				        	    <Input id="idRequestid" value=""  submit="onSubmit" placeholder="Enter Request ID"></Input>
 				        	    <Label text="Requested For" required="true"/>
@@ -48,7 +47,7 @@
 								<Label text="Channel"/>
 								<Text text="{/Channel}" id="idChannel"></Text>
 								  
-								<core:Title text="" />
+								<core: />
 								<Label text=""/>
 								<Text text="" id="Blank"></Text>
 								<Label text="CompanyCode"/>
@@ -75,7 +74,6 @@
 						<f:SimpleForm id="IdVehicleSelection"
 						              editable="true" 
 						              layout="ResponsiveGridLayout"
-						              title="Vehicle Selected For Shipping"
 						              labelSpanXL="4"
 									  labelSpanL="4"
 									  labelSpanM="12"
@@ -91,7 +89,7 @@
 									  backgroundDesign = "Solid"
 									  singleContainerFullSize="false">
 							 <f:content>
-							 	<core:Title text="" />
+							 	<core: />
 				        	    <Label text="Vehicle ID"/>
 				        	    <Text id="idVehicleID" text="{localVhModel>/Vehicleid}" ></Text>
 				        	    
@@ -104,7 +102,7 @@
 				        	    <Label text="Vehicle/Plate Number"/>
 				        	    <Text id="idVehicleNumber" text="{localVhModel>/VehicleNumber}" ></Text>
 				        	    
-				        	    <core:Title text="" />
+				        	    <core:>
 				        	    <Label text="Plant" required="true"/>
 				        	    <Text id="idPlant" text="{localVhModel>/Plant}"  ></Text>
 				        	    
@@ -122,7 +120,6 @@
 						<f:SimpleForm id="IdShipDet"
 						              editable="true" 
 						              layout="ResponsiveGridLayout"
-						              title="Shipping Details"
 						              labelSpanXL="4"
 									  labelSpanL="4"
 									  labelSpanM="12"
@@ -138,7 +135,7 @@
 									  backgroundDesign = "Solid"
 									  singleContainerFullSize="false">
 							<f:content>
-								    <core:Title text="" />
+								    <core:/>
 									<Label text="From Location"                           required="true"/>
 									<Input id="idFloc" value="{localVhModel>/Location}"   placeholder="" enabled = "false"></Input>
 									
@@ -182,4 +179,5 @@
 		</pages>
 		</App>
 	</Shell>
+
 </mvc:View>
