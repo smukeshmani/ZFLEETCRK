@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "3.1"
+metadata:
+  name: zgbc_fleet_cleark.zgbc_fleet_cleark
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: DEV_BRN_HEC
+          url: https://dev.berain.com.sa:44310/
+          client: '100'
+        app:
+          name: ZFLEETCRK
+          description: ZFLEETCRK
+          package: ZFIORI
+          transport: REPLACE_WITH_TRANSPORT
+        exclude:
+          - /test/
