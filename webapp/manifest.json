@@ -90,7 +90,7 @@
                 "routerClass": "sap.m.routing.Router",
                 "viewType": "XML",
                 "async": true,
-                "viewPath": "ZGBC_FLEET_CLEARK.ZGBC_FLEET_CLEARK.view",
+                "path": "ZGBC_FLEET_CLEARK.ZGBC_FLEET_CLEARK.view",
                 "controlAggregation": "pages",
                 "controlId": "app",
                 "clearControlAggregation": false
@@ -109,8 +109,8 @@
                     "viewType": "XML",
                     "transition": "slide",
                     "clearControlAggregation": false,
-                    "viewId": "View1",
-                    "viewName": "View1"
+                    "Id": "View1",
+                    "name": "View1"
                 }
             }
         }
